@@ -1,0 +1,44 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+:root {
+  /*------------------------------------*\
+    #CORE
+  \*------------------------------------*/
+  --base-color: #212121;
+  --base-bkg: #F8F9F9;
+  --base-border: #909090;
+  --link: #993333;
+  --base-color-rgb: 21, 21, 21;
+  --base-bkg-rgb: 232, 233, 243;
+  --base-focus: 2px dotted var(--link);
+  --selection-bkg: pink;
+  --pop-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.84), 0 4px 25px 0px rgba(0, 0, 0, 0.18), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+
+  /*------------------------------------*\
+    #HEADER
+  \*------------------------------------*/
+  --header-bkg: var(--base-color);
+  --header-color: var(--base-bkg);
+
+  /*------------------------------------*\
+    #BUTTON
+  \*------------------------------------*/
+  --button-color: var(--base-bkg);
+  --button-bkg: var(--link);
+
+  /*------------------------------------*\
+    #FORMS
+  \*------------------------------------*/
+  --input-bkg: white;
+
+  /*------------------------------------*\
+    #C-CARD
+  \*------------------------------------*/
+  --card-border: #212121;
+}

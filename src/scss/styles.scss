@@ -1,0 +1,234 @@
+@import '~src/scss/variables';
+@import '~src/scss/mixins';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~bootstrap/dist/css/bootstrap-grid.min';
+@import '~reset-css-complete/reset';
+
+/*------------------------------------*\
+  #Bootstrap Assist
+\*------------------------------------*/
+.container {
+  display: block;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+body {
+  color: var(--base-color);
+  background-color: var(--base-bkg);
+  font-family: 'Open Sans', sans-serif;
+}
+
+::selection {
+  background: var(--selection-bkg);
+}
+
+.sb-link, a {
+  color: var(--link);
+  display: inline;
+  text-decoration: underline;
+  transition: filter 250ms;
+
+  &:focus {
+    @include base-focus;
+  }
+
+  &:hover {
+    filter: contrast(125%);
+  }
+}
+
+.sb-heading-1,
+.sb-heading-2,
+.sb-heading-3,
+.sb-heading-4,
+.sb-heading-5,
+.sb-heading-6,
+h1, h2, h3, h4, h5, h6 {
+  color: var(--base-color);
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.2;
+}
+
+.sb-heading-1,
+h1 {
+  font-size: 2.3rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: breakpoint-min(md)) {
+    font-size: 2.8rem;
+  }
+}
+
+.sb-heading-2,
+h2 {
+  font-size: 1.9rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: breakpoint-min(md)) {
+    font-size: 2.1rem;
+  }
+}
+
+.sb-heading-3,
+h3 {
+  font-size: 1.55rem;
+  margin-bottom: 1.25rem;
+
+  @media (min-width: breakpoint-min(md)) {
+    font-size: 1.638rem;
+  }
+}
+
+.sb-heading-4,
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.sb-heading-5,
+h5 {
+  font-size: 1.162rem;
+  margin-bottom: 1rem;
+}
+
+.sb-heading-6,
+h6 {
+  font-size: .938rem;
+  margin-bottom: 1rem;
+}
+
+p, blockquote {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+blockquote {
+  border-left: 3px solid rgba(var(--base-color-rgb), .75);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1.4;
+  margin: 2rem 0 2rem 1.5rem;
+  padding: 1rem 1rem 1rem 2rem;
+
+  @media (min-width: breakpoint-min(md)) {
+    border-left-width: 4px;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 2.5rem 2rem;
+    padding: 1rem 3rem;
+  }
+}
+
+.sb-hr, hr {
+  display: block;
+  border: none;
+  margin: 3rem 0;
+  height: 2px;
+  background-color: rgba(var(--base-color-rgb), .75);
+
+  &.sb-hr--thin {
+    height: 1px;
+  }
+}
+
+$btn-class: sb-button;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.#{$btn-class} {
+  background: var(--button-bkg);
+  border-radius: rem(3);
+  color: var(--button-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: .8rem 1.4rem;
+  position: relative;
+  transition: filter 250ms, top 250ms;
+
+  > * {
+    padding: 0 .5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  &:focus {
+    @include base-focus;
+  }
+
+  &:hover,
+  &:focus {
+    filter: contrast(125%);
+  }
+
+  &.#{$btn-class}--info {
+    background: var(--base-color);
+    color: var(--base-bkg);
+  }
+
+  &.#{$btn-class}--icon {
+    height: 2em;
+    width: 2em;
+    padding: 0;
+  }
+
+  &.#{$btn-class}--pill {
+    border-radius: 2em;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+mark {
+  color: var(--base-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[type="datetime-local"],
+select,
+textarea {
+  background: var(--input-bkg);
+  color: var(--base-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--base-border);
+
+  &:focus {
+    @include base-focus;
+  }
+}

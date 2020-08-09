@@ -1,0 +1,63 @@
+@import '~src/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.footer {
+  padding: 2rem 0 3rem 0;
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__links {
+    ul {
+      justify-content: center;
+      padding-bottom: 1rem;
+      li {
+        padding: 0 .5rem;
+
+        a {
+          display: block;
+        }
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        justify-content: start;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__social {
+    ul {
+      justify-content: center;
+      li {
+        padding: 0 .5rem;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        justify-content: end;
+      }
+    }
+  }
+}
