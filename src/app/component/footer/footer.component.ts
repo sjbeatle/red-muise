@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-
 export class FooterComponent implements OnInit {
   faEnvelope = faEnvelope;
   faFacebookSquare = faFacebookSquare;
-  faTwitterSquare = faTwitterSquare;
+  faInstagramSquare = faInstagramSquare;
 
   constructor() { }
 
